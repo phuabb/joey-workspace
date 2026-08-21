@@ -1,0 +1,11 @@
+{
+  "name": "Joey 工作台",
+  "short_name": "Joey 工作台",
+  "description": "本机优先、支持离线的项目与每日待办工作台",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f4f1",
+  "theme_color": "#f4f4f1",
+  "lang": "zh-CN",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
