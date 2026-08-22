@@ -1,17 +1,36 @@
-# Joey 工作台
+# Joey 工作台 v2
 
-一个移动端优先、本机保存、可安装到手机桌面并支持离线使用的项目工作台。
+移动端优先、本机保存、离线可用的个人项目工作台。
 
-## 发布到 GitHub Pages
+## v2 核心变化
 
-1. 登录 GitHub，点击右上角 `+` → `New repository`。
-2. Repository name 填 `joey-workspace`，选择 `Public`，点击 `Create repository`。
-3. 点击 `uploading an existing file`，上传本目录中的 `index.html`、`manifest.webmanifest`、`sw.js`、`icon.svg`。
-4. 点击 `Commit changes`。
-5. 进入 `Settings` → `Pages`，在 `Build and deployment` 中选择 `Deploy from a branch`。
-6. Branch 选择 `main` 和 `/ (root)`，点击 `Save`。
-7. 等待约 1–3 分钟，页面会显示网站地址，通常为 `https://你的用户名.github.io/joey-workspace/`。
+- 项目页的 `＋项目` 直接创建新项目。
+- 新建项目只要求项目名称和多行待办；回车、输入最后一行或粘贴多行会自动增加任务行。
+- “今日”完全从项目任务实时计算，不再维护重复数据。
+- 点击左上角 `J` 打开 ChatGPT 式项目侧边栏。
+- 项目、任务、里程碑、合作方、记录、链接全部支持新增、编辑和删除。
+- 新增收集箱、模板、自动进度、自动风险、可解释优先级、搜索、归档和工作简报。
+- 删除无法稳定联网的热点页面。
+- 每个项目增加本机文件库，可从系统“文件”、相册、相机导入，支持在线链接和微信导入指引。
+- 完整备份同时包含项目数据和本机文件。
 
-## 离线说明
+## 更新 GitHub Pages
 
-网站需要首次联网打开以缓存文件；之后即使断网，核心项目、待办、看板、时间轴、本地 AI 模板和数据导入导出仍可使用。实时营销热点必须联网获取。
+将本目录内以下文件上传到 GitHub 仓库根目录并覆盖同名文件：
+
+- `index.html`
+- `styles.css`
+- `app.js`
+- `manifest.webmanifest`
+- `icon.svg`
+- `sw.js`
+
+提交后等待 GitHub Pages 更新，再使用带版本参数的地址打开：
+
+`https://phuabb.github.io/joey-workspace/?update=6`
+
+如果已经添加到 iPhone 主屏幕，请先用 Safari 打开一次更新链接，停留约 10 秒，再从主屏幕打开。
+
+## 文件存储说明
+
+导入的文件保存在当前浏览器的 IndexedDB 中，不会上传到公开网站。离线时仍可打开本机文件；在线链接必须联网。使用“工具 → 完整备份”可同时备份结构化数据和文件。
